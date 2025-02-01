@@ -1,3 +1,11 @@
+// Common Js
+document.querySelectorAll(".watch-control, .controls a").forEach((control) => {
+  control.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});
+// End Of Common Js
+
 // Cube
 let x = 0;
 let y = 20;
@@ -87,3 +95,56 @@ window.addEventListener("scroll", () => {
   }
 });
 // End Of Section 3
+
+// Section 4
+const watchBands = document.querySelector(".watch-bands");
+const watchCases = document.querySelector(".watch-cases");
+
+const watchTopControl = document.querySelector(".watch-top-control");
+const watchRightControl = document.querySelector(".watch-right-control");
+const watchBottomControl = document.querySelector(".watch-bottom-control");
+const watchLeftControl = document.querySelector(".watch-left-control");
+
+let axisY = 0;
+let axisX = 0;
+const hideControl = () => {
+  if (axisY === -280) {
+    watchTopControl.classList.add("hideControl");
+  } else {
+    watchTopControl.classList.remove("hideControl");
+  }
+  if (axisY === 280) {
+    watchBottomControl.classList.add("hideControl");
+  } else {
+    watchBottomControl.classList.remove("hideControl");
+  }
+  if (axisX === -280) {
+    watchRightControl.classList.add("hideControl");
+  } else {
+    watchRightControl.classList.remove("hideControl");
+  }
+  if (axisX === 280) {
+    watchLeftControl.classList.add("hideControl");
+  } else {
+    watchLeftControl.classList.remove("hideControl");
+  }
+};
+
+watchTopControl.addEventListener("click", () => {
+  watchCases.style.marginTop = `${(axisY -= 70)}rem`;
+  hideControl();
+  console.log(axisY);
+});
+watchBottomControl.addEventListener("click", () => {
+  watchCases.style.marginTop = `${(axisY += 70)}rem`;
+  hideControl();
+});
+watchRightControl.addEventListener("click", () => {
+  watchBands.style.marginLeft = `${(axisX -= 70)}rem`;
+  hideControl();
+});
+watchLeftControl.addEventListener("click", () => {
+  watchBands.style.marginLeft = `${(axisX += 70)}rem`;
+  hideControl();
+});
+// End Of Section 4
