@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* Common Styles */
 * {
@@ -10,20 +10,25 @@
   text-decoration: none;
   font-family: "Work Sans", sans-serif;
 }
+
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
+
 :root {
   --primary-color: #6edae6;
   --white-color: #fff;
   --black-color: #000;
 }
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* End Of Common Styles */
+/* End of Common Styles */
+
 /* Section 1 */
 .section-1 {
   width: 100%;
@@ -35,23 +40,27 @@ html {
   clip-path: polygon(100% 0, 100% 95%, 38% 100%, 0 100%, 0 0);
   position: relative;
 }
+
 /* Logo */
 .logo {
   position: absolute;
   top: 3rem;
   left: 3rem;
 }
+
 .logo i {
   font-size: 10rem;
   color: rgba(0, 0, 0, 0.8);
 }
-/* End Of Logo */
+/* End of Logo */
+
 /* Navbar */
 .navbar {
   position: absolute;
   top: 3rem;
   right: 10%;
 }
+
 .navbar-link {
   font-size: 2rem;
   display: inline-block;
@@ -59,14 +68,17 @@ html {
   color: var(--black-color);
   transition: transform 0.5s;
 }
+
 .navbar-link:hover {
   transform: scale(1.5);
 }
-/* End Of Navbar */
+/* End of Navbar */
+
 /* Cube */
 .cube-wrapper {
   perspective: 100rem;
 }
+
 .cube {
   width: 30rem;
   height: 55rem;
@@ -76,6 +88,7 @@ html {
   top: -2rem;
   transition: transform 0.5s;
 }
+
 .front-side,
 .back-side {
   width: 100%;
@@ -85,10 +98,12 @@ html {
   transform-style: preserve-3d;
   box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
 }
+
 .front-side {
   padding: 2.5rem;
   transform: translateZ(5rem);
 }
+
 .front-side::before,
 .front-side::after {
   content: "";
@@ -98,26 +113,31 @@ html {
   position: absolute;
   box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
 }
+
 .front-side::before {
   top: 0;
   left: 0;
   transform: rotateX(-90deg);
   transform-origin: top;
 }
+
 .front-side::after {
   bottom: 0;
   left: 0;
   transform: rotateX(90deg);
   transform-origin: bottom;
 }
+
 .front-side img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
 .back-side {
   transform: translateZ(-5rem);
 }
+
 .back-side::before,
 .back-side::after {
   content: "iPhone";
@@ -133,24 +153,28 @@ html {
   color: #ec1919;
   box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
 }
+
 .back-side::before {
   top: 0;
   left: 0;
   transform: rotateY(-90deg);
   transform-origin: left;
 }
+
 .back-side::after {
   top: 0;
   right: 0;
   transform: rotateY(90deg);
   transform-origin: right;
 }
+
 .back-side i {
   font-size: 12rem;
   color: var(--primary-color);
   text-shadow: 0.1rem 0.1rem 0.2rem #aaa, -0.1rem -0.1rem 0.2rem #aaa;
   transform: rotateY(180deg);
 }
+
 /* Controls */
 .controls {
   position: absolute;
@@ -163,70 +187,84 @@ html {
   border-radius: 50%;
   border: 1rem solid rgba(0, 0, 0, 0.8);
 }
+
 .controls a {
   position: absolute;
 }
+
 .controls a:nth-child(1) {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .controls a:nth-child(2) {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .controls a:nth-child(3) {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
+
 .controls a:nth-child(4) {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
 }
+
 .controls a:nth-child(5) {
   top: 10%;
   right: 10%;
   transform: rotate(45deg);
 }
+
 .controls a:nth-child(6) {
   bottom: 10%;
   left: 10%;
   transform: rotate(45deg);
 }
+
 .controls i {
   font-size: 1.5rem;
   color: var(--primary-color);
   opacity: 0.5;
   transition: opacity 0.5s;
 }
+
 .controls a:hover i {
   opacity: 1;
 }
-/* End Of Controls */
-/* End Of Cube */
+/* End of Controls */
+/* End of Cube */
+
 /* Banner */
 .section-1-banner {
   flex-direction: column;
 }
+
 .section-1-banner h1 {
   font-size: 13rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
+
 .section-1-banner p {
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin: 6rem 0 4rem 0;
 }
+
 .section-1-banner span {
   font-size: 3rem;
   margin-bottom: 5rem;
 }
+
 .section-1-banner button {
   padding: 2rem 4rem;
   font-size: 2rem;
@@ -251,6 +289,7 @@ html {
   );
   transition: clip-path 0.5s;
 }
+
 .section-1-banner button:hover {
   clip-path: polygon(
     40% 15%,
@@ -265,8 +304,9 @@ html {
     30% 0
   );
 }
-/* End Of Banner */
-/* SlideShow */
+/* End of Banner */
+
+/* Slideshow */
 .slideshow {
   width: 100%;
   height: 100%;
@@ -275,6 +315,7 @@ html {
   left: 0;
   z-index: -1;
 }
+
 .slideshow div {
   width: 100%;
   height: 100%;
@@ -285,32 +326,34 @@ html {
   opacity: 0;
   transition: opacity 5s;
 }
+
 .slideshow div.change {
   opacity: 1;
 }
-/* End Of SlideShow */
-/* End Of Section 1 */
+/* End of Slideshow */
+/* End of Section 1 */
 
-/* section-2 */
+/* Section 2 */
 .section-2 {
   width: 100%;
   height: 120vh;
-  padding: 10% 0;
+  padding: 10vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
-/* Section 2 Headding */
-.section-2-headding {
+/* Section 2 Heading */
+.section-2-heading {
   font-size: 10rem;
   font-weight: 200;
   color: var(--black-color);
   position: relative;
   margin-bottom: 5rem;
 }
-.section-2-headding::before {
+
+.section-2-heading::before {
   content: "";
   width: 130%;
   height: 30vw;
@@ -319,11 +362,11 @@ html {
   top: 0;
   left: 0;
   transform: skewX(-50deg);
-  transform-origin: top left;
+  transform-origin: left top;
   z-index: -1;
   border-radius: 1rem;
 }
-/* End Of Section 2 Headding */
+/* End of Section 2 Heading */
 
 /* Section 2 Images */
 .iphones {
@@ -332,6 +375,7 @@ html {
   background-image: linear-gradient(var(--primary-color), var(--white-color));
   border-radius: 0.5rem;
 }
+
 .iphones img {
   width: inherit;
   height: inherit;
@@ -339,21 +383,25 @@ html {
   position: absolute;
   transition: opacity 3s;
 }
+
 .iphone-img-2 {
   opacity: 0;
 }
+
 .iphones:hover .iphone-img-1 {
   opacity: 0;
 }
+
 .iphones:hover .iphone-img-2 {
   opacity: 1;
 }
-/* End Of Section 2 Images */
+/* End of Section 2 Images */
 
 /* Section 2 Buttons */
-.iphones-btns {
+.iphone-btns {
   display: flex;
 }
+
 .iphone-btn {
   width: 6rem;
   height: 6rem;
@@ -366,6 +414,7 @@ html {
   border-radius: 50%;
   position: relative;
 }
+
 .iphone-btn::after {
   content: "";
   width: 50%;
@@ -374,6 +423,7 @@ html {
   border: 0.1rem solid #6edae6;
   border-radius: 1rem;
 }
+
 .iphone-btn span {
   position: absolute;
   top: -3rem;
@@ -386,11 +436,12 @@ html {
   transform: scale(0);
   transition: transform 0.5s;
 }
+
 .iphone-btn:hover span {
   transform: scale(1);
 }
-/* End Of Section 2 Buttons */
-/* End Of section-2 */
+/* End of Section 2 Buttons */
+/* End of Section 2 */
 
 /* Section 3 */
 .section-3 {
@@ -402,14 +453,14 @@ html {
   clip-path: polygon(68% 0, 100% 0, 100% 97%, 38% 100%, 0 100%, 0 3%);
 }
 
-/* Section 3 Headding */
-.section-3-headding {
+/* Section 3 Heading */
+.section-3-heading {
   font-size: 10rem;
   font-weight: 200;
   color: var(--primary-color);
   margin-bottom: 15rem;
 }
-/* End Of Section 3 Headding */
+/* End of Section 3 Heading */
 
 /* Section 3 Content */
 .section-3-content {
@@ -423,15 +474,17 @@ html {
 .section-3-content img {
   width: inherit;
 }
+
 .macbook-img-1 {
   transform: rotateX(-80deg);
   transform-origin: bottom;
 }
+
 .change .macbook-img-1 {
   transform: rotateX(0);
   transition: transform 3s;
 }
-/* End Of Section 3 Images */
+/* End of Section 3 Images */
 
 /* Section 3 Loading */
 .loading-wrapper {
@@ -443,14 +496,16 @@ html {
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.6)
     ),
-    url(/images/MacBook/macbook-1-desktop.png);
+    url(images/MacBook/macbook-1-desktop.png) center no-repeat;
   z-index: -1;
   opacity: 0;
 }
+
 .change .loading-wrapper {
   opacity: 1;
   transition: opacity 1s 2s;
 }
+
 .loading {
   width: 100%;
   height: 100%;
@@ -460,15 +515,18 @@ html {
   background-color: var(--black-color);
   flex-direction: column;
 }
+
 .change .loading {
   opacity: 0;
-  transition: opacity 1s 5s;
+  transition: 1s 5s;
 }
+
 .loading i {
   font-size: 10rem;
   color: var(--white-color);
   margin-bottom: 2rem;
 }
+
 .progress-bar {
   width: 22rem;
   height: 0.3rem;
@@ -476,6 +534,7 @@ html {
   border-radius: 5rem;
   position: relative;
 }
+
 .progress-bar::after {
   content: "";
   position: absolute;
@@ -485,11 +544,12 @@ html {
   height: 100%;
   background-color: var(--white-color);
 }
+
 .change .progress-bar::after {
   width: 100%;
   transition: width 1s 3s;
 }
-/* End Of Section 3 Loading */
+/* End of Section 3 Loading */
 
 /* Section 3 Info */
 .macbook-info {
@@ -498,20 +558,24 @@ html {
   text-align: center;
   opacity: 0;
 }
+
 .change .macbook-info {
   opacity: 1;
   transition: opacity 1s 6s;
 }
+
 .macbook-info-heading {
   font-size: 6rem;
   font-weight: 400;
   color: var(--primary-color);
 }
+
 .macbook-price {
   font-size: 2.5rem;
   font-weight: 200;
   margin: 3rem 0;
 }
+
 .macbook-btn {
   width: 25rem;
   height: 5rem;
@@ -525,9 +589,9 @@ html {
   color: var(--primary-color);
   cursor: pointer;
 }
-/* End Of Section 3 Info */
-/* End Of Section 3 Content */
-/* End Of Section 3 */
+/* End of Section 3 Info */
+/* End of Section 3 Content */
+/*End of Section 3 */
 
 /* Section 4 */
 .section-4 {
@@ -544,69 +608,79 @@ html {
   height: 100%;
   overflow: hidden;
 }
+
 .watches > div {
   position: absolute;
 }
-/* Wacth bands */
+/* Watch Bands */
+.watch-bands {
+  transition: margin-right 1s;
+}
+
 .watch-band-img {
   width: 35rem;
   height: 35rem;
   object-fit: contain;
 }
-.watch-bands {
-  transition: margin-Left 1s;
-}
-/* End Of Wacth bands */
-/* Wacth Cases */
+/* End of Watch Bands */
+
+/* Watch Cases */
 .watch-cases {
   flex-direction: column;
   transition: margin-top 1s;
 }
+
 .watch-case-img {
   width: 35rem;
   height: 35rem;
   object-fit: contain;
 }
-/* End Of Wacth Cases */
-/* End Of Section 4 Watches */
+/* End of Watch Cases */
+/* End of Section 4 Watches */
 
 /* Watch Controls */
 .watch-control {
   position: absolute;
   width: 4rem;
   height: 4rem;
-  background-color: dgba(221, 221, 221, 0.4);
+  background-color: rgba(221, 221, 221, 0.4);
   border-radius: 5rem;
 }
+
 .hideControl {
   opacity: 0;
   visibility: hidden;
 }
+
 .watch-control i {
   font-size: 3rem;
   color: var(--primary-color);
 }
+
 .watch-top-control {
   top: 22vh;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .watch-right-control {
   top: 50%;
   right: 2rem;
   transform: translateY(-50%);
 }
+
 .watch-bottom-control {
-  bottom: 22vh;
   left: 50%;
+  bottom: 20vh;
   transform: translateX(-50%);
 }
+
 .watch-left-control {
   top: 50%;
   left: 2rem;
   transform: translateY(-50%);
 }
-/* End Of Watch Controls */
+/* End of Watch Controls */
 
 /* Watch Button */
 .watch-btn {
@@ -623,5 +697,306 @@ html {
   font-weight: 200;
   cursor: pointer;
 }
-/* End OF Watch Button */
-/* End  Of Section 4 */
+/* End of Watch Button */
+/* End of Section 4 */
+
+/* Section 5 */
+.section-5 {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Section 5 Content */
+.airpods {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  position: relative;
+}
+
+/* Section 5 Heading */
+.section-5-heading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15rem;
+  font-weight: 300;
+  color: var(--white-color);
+  text-shadow: 0.1rem 0.1rem 0 #999;
+}
+/* End of Section 5 Heading */
+
+/* Section 5 Images */
+.airpods img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.airpods-img-2 {
+  background-color: var(--primary-color);
+}
+/* End of Section 5 Images */
+
+/* Section 5 Buttons */
+.airpods-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5rem;
+}
+
+.airpods-btn {
+  width: 15rem;
+  height: 4rem;
+  background-color: var(--primary-color);
+  margin: 0 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.airpods-btn:last-child {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+/* End of Section 5 Buttons */
+/* End of Section 5 Content */
+/* End of Section 5 */
+
+/* Section 6 */
+.section-6 {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+}
+
+.icon-link {
+  margin: 0 5rem;
+}
+
+.icon-link img {
+  width: 10rem;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+/* End of Section 6 */
+
+/* Responsive */
+@media (max-width: 1500px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 40%;
+  }
+
+  .navbar-link {
+    font-weight: 700;
+  }
+
+  .section-1-banner h1 {
+    font-size: 8rem;
+  }
+
+  .section-1-banner p {
+    font-size: 3rem;
+  }
+
+  .watch-btn {
+    right: 25%;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-3-content {
+    width: 90%;
+  }
+
+  .loading-wrapper {
+    width: 70%;
+  }
+
+  .loading i {
+    font-size: 6rem;
+  }
+
+  .section-5-heading {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo {
+    top: 0;
+    left: 2rem;
+  }
+
+  .logo i {
+    font-size: 8rem;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .cube-wrapper {
+    opacity: 0.7;
+  }
+
+  .cube {
+    top: 3rem;
+  }
+
+  .section-1-banner {
+    position: absolute;
+  }
+
+  .section-1-banner h1 {
+    position: relative;
+    left: -5rem;
+  }
+
+  .section-1-banner h1::first-letter {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .section-1-banner button:hover {
+    clip-path: polygon(
+      50% 0%,
+      81% 5%,
+      100% 0,
+      100% 100%,
+      80% 95%,
+      50% 100%,
+      20% 95%,
+      0 100%,
+      0 0,
+      23% 5%
+    );
+  }
+
+  .iphones {
+    height: 70vh;
+    width: 70vw;
+  }
+
+  .watch-btn {
+    right: 15%;
+  }
+
+  .airpods-img-1 {
+    display: none;
+  }
+
+  .airpods .airpods-img-2 {
+    width: 100%;
+  }
+
+  .airpods-btn {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem #ddd;
+  }
+
+  .icon-link {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar-link {
+    margin: 0 1.5rem;
+  }
+
+  .section-2-heading {
+    font-size: 8rem;
+  }
+
+  .section-3-heading {
+    font-size: 8rem;
+  }
+
+  .macbook-info-heading {
+    font-size: 5rem;
+  }
+
+  .macbook-btn {
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+
+  .airpods-buttons {
+    width: 50rem;
+    text-align: center;
+  }
+
+  .icon-link img {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 35%;
+  }
+
+  .logo {
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+
+  .section-1-banner p {
+    text-align: center;
+  }
+
+  .iphones {
+    width: 75vw;
+  }
+
+  .section-3-heading {
+    font-size: 6rem;
+  }
+
+  .macbook-info {
+    width: 40rem;
+  }
+
+  .macbook-info-heading {
+    font-size: 3rem;
+  }
+
+  .macbook-price {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .watch-btn {
+    right: 5%;
+  }
+
+  .icon-link img {
+    width: 6rem;
+  }
+}
+/* End of Responsive */
