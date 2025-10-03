@@ -21,6 +21,3 @@ This project demonstrates modern web development skills including responsive des
 - **Tools:** VS Code, GitHub Pages for deployment  
 - **Deployment:** [GitHub Pages](https://mo-sa-mo.github.io/Apple-eCommerce/)  
 
----
-
-## 📂 Project Structure
